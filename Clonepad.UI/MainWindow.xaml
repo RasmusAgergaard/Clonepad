@@ -5,40 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clonepad.UI"
         mc:Ignorable="d"
-        Title="Clonepad" Height="450" Width="800">
-
+        Title="Clonepad" Height="450" Width="800" Closing="Window_Closing">
 
     <DockPanel>
         
         <Menu DockPanel.Dock="Top" Background="White">
             <MenuItem Header="_File">
-                <MenuItem x:Name="New" Header="_New" Click="MenuItem_New_Click" />
+                <MenuItem Header="_New" Click="MenuItem_New_Click" />
                 <MenuItem Header="_Open..." Click="MenuItem_Open_Click" />
-                <MenuItem Header="_Save" />
-                <MenuItem Header="_Save As..." Click="MenuItem_SaveAs_Click" />
+                <MenuItem Header="_Save" Click="MenuItem_Save_Click" />
+                <MenuItem Header="Save _As..." Click="MenuItem_SaveAs_Click" />
                 <Separator />
-                <MenuItem Header="Page Setup..." />
-                <MenuItem Header="Print..." />
+                <MenuItem Header="Page Set_up..." />
+                <MenuItem Header="_Print..." />
                 <Separator />
-                <MenuItem Header="_Exit" Click="MenuItem_Exit_Click" />
+                <MenuItem Header="E_xit" Click="MenuItem_Exit_Click" />
             </MenuItem>
             <MenuItem Header="_Edit">
-                <MenuItem Header="_Undo" />
+                <MenuItem Header="_Undo" Click="MenuItem_Undo_Click" InputGestureText="Ctrl+Z"/>
                 <Separator />
-                <MenuItem Header="_Cut" />
-                <MenuItem Header="_Copy" />
-                <MenuItem Header="_Paste" />
-                <MenuItem Header="_Delete" />
+                <MenuItem Header="Cu_t" Click="MenuItem_Cut_Click" />
+                <MenuItem Header="_Copy" Click="MenuItem_Copy_Click" />
+                <MenuItem Header="_Paste" Click="MenuItem_Paste_Click" />
+                <MenuItem Header="De_lete" Click="MenuItem_Delete_Click" />
                 <Separator />
-                <MenuItem Header="_Find" />
-                <MenuItem Header="_FInd Next" />
-                <MenuItem Header="_Replace..." />
-                <MenuItem Header="_Go To..." />
+                <MenuItem Header="_Find" Click="MenuItem_Find_Click" />
+                <MenuItem Header="Find _Next" Click="MenuItem_FindNext_Click" />
+                <MenuItem Header="_Replace..." Click="MenuItem_Replace_Click" />
+                <MenuItem Header="_Go To..." Click="MenuItem_GoTo_Click" />
                 <Separator />
-                <MenuItem Header="_Select All" />
-                <MenuItem Header="_Time/Date" />
+                <MenuItem Header="Select _All" Click="MenuItem_SelectAll_Click" />
+                <MenuItem Header="Time/_Date" Click="MenuItem_TimeDate_Click" />
             </MenuItem>
-            <MenuItem Header="_Format">
+            <MenuItem Header="F_ormat">
                 <MenuItem Header="_Word Wrap" />
                 <MenuItem Header="_Font..." />
             </MenuItem>
@@ -46,12 +45,12 @@
                 <MenuItem Header="_Status Bar" />
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="_VIew Help" />
+                <MenuItem Header="View _Help" />
                 <Separator />
                 <MenuItem Header="_About Clonepad" />
             </MenuItem>
         </Menu>
-        
+
         <TextBox x:Name="TextBox" HorizontalAlignment="Stretch" 
                  VerticalAlignment="Stretch"
                  TextWrapping="NoWrap" 
@@ -59,9 +58,44 @@
                  Text="" 
                  Width="auto" 
                  Height="auto"                 
-                 Margin="0,0,0,0"
+                 Margin="-1,-1,-1,-1"
                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                 ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                 BorderThickness="1" BorderBrush="#FFD0D0D0" KeyDown="TextBox_KeyDown" />
+                 ScrollViewer.HorizontalScrollBarVisibility="Visible" FontFamily="Consolas" FontSize="14" TextChanged="TextBox_TextChanged" KeyDown="TextBox_KeyDown">
+
+            <TextBox.Style>
+
+                <Style BasedOn="{x:Null}" TargetType="{x:Type TextBox}">
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="AllowDrop" Value="true"/>
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border x:Name="bg" BorderBrush="#FFf2f2f2" BorderThickness="2">
+                                    <ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    
+                                    <Trigger Property="IsFocused" Value="True">
+                                        <Setter Property="BorderBrush" TargetName="bg" Value="#FFf2f2f2"/>
+                                        <Setter Property="BorderThickness" TargetName="bg" Value="2"/>
+                                    </Trigger>
+
+                                    <Trigger Property="IsFocused" Value="False">
+                                        <Setter Property="BorderBrush" TargetName="bg" Value="#FFf2f2f2"/>
+                                        <Setter Property="BorderThickness" TargetName="bg" Value="2"/>
+                                    </Trigger>
+                                    
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+            </TextBox.Style>
+
+        </TextBox>
+
     </DockPanel>
 </Window>
