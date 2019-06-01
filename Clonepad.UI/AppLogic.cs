@@ -11,9 +11,6 @@ namespace Clonepad.UI
         private string _fileSavePath;
         private string _fileSaveName = "Untitled";
 
-        private Stack<string> _undoList = new Stack<string>();
-        private Stack<int> _cursorPositions = new Stack<int>();
-
         public void SetTitle()
         {
             Title = $"{_fileSaveName} - {_appTitle}";
@@ -24,29 +21,12 @@ namespace Clonepad.UI
             }
         }
 
-        public void UpdateUndoList()
-        {
-            _undoList.Push(TextBox.Text);
-            _cursorPositions.Push(TextBox.CaretIndex);
-        }
-
-        public void Undo()
-        {
-            if (_undoList.Count > 0)
-            {
-                TextBox.Text = _undoList.Pop();
-                TextBox.CaretIndex = _cursorPositions.Pop();
-            }
-        }
-
         public void ResetApp()
         {
             TextBox.Text = "";
             _fileSaved = true;
             _fileSaveName = "Untitled";
             _fileSavePath = null;
-            _undoList.Clear();
-            _cursorPositions.Clear();
             SetTitle();
         }
 

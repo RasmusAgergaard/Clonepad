@@ -16,18 +16,15 @@
                 <MenuItem Header="_Save" Click="MenuItem_Save_Click" />
                 <MenuItem Header="Save _As..." Click="MenuItem_SaveAs_Click" />
                 <Separator />
-                <MenuItem Header="Page Set_up..." />
-                <MenuItem Header="_Print..." />
-                <Separator />
                 <MenuItem Header="E_xit" Click="MenuItem_Exit_Click" />
             </MenuItem>
             <MenuItem Header="_Edit">
-                <MenuItem Header="_Undo" Click="MenuItem_Undo_Click" InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="_Undo" Command="ApplicationCommands.Undo"/>
                 <Separator />
-                <MenuItem Header="Cu_t" Click="MenuItem_Cut_Click" />
-                <MenuItem Header="_Copy" Click="MenuItem_Copy_Click" />
-                <MenuItem Header="_Paste" Click="MenuItem_Paste_Click" />
-                <MenuItem Header="De_lete" Click="MenuItem_Delete_Click" />
+                <MenuItem Header="Cu_t" Command="ApplicationCommands.Cut" />
+                <MenuItem Header="_Copy" Command="ApplicationCommands.Copy" />
+                <MenuItem Header="_Paste" Command="ApplicationCommands.Paste" />
+                <MenuItem Header="De_lete" Command="ApplicationCommands.Delete" />
                 <Separator />
                 <MenuItem Header="_Find" Click="MenuItem_Find_Click" />
                 <MenuItem Header="Find _Next" Click="MenuItem_FindNext_Click" />
@@ -60,7 +57,10 @@
                  Height="auto"                 
                  Margin="-1,-1,-1,-1"
                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                 ScrollViewer.HorizontalScrollBarVisibility="Visible" FontFamily="Consolas" FontSize="14" TextChanged="TextBox_TextChanged" KeyDown="TextBox_KeyDown">
+                 ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                 FontFamily="Consolas" 
+                 FontSize="14" 
+                 TextChanged="TextBox_TextChanged">
 
             <TextBox.Style>
 

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Clonepad.UI
 {
@@ -65,16 +66,6 @@ namespace Clonepad.UI
         public void MenuSaveFileAs()
         {
             SaveFileAs();
-        }
-
-        public void MenuPageSetup()
-        {
-            //TODO: Implement MenuPageSetup()
-        }
-
-        public void MenuPrint()
-        {
-            //TODO: Implement  MenuPrint()
         }
     }
 }

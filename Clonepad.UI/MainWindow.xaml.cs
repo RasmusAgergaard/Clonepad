@@ -38,31 +38,6 @@ namespace Clonepad.UI
         }
 
         //Edit
-        private void MenuItem_Undo_Click(object sender, RoutedEventArgs e)
-        {
-            MenuUndo();
-        }
-
-        private void MenuItem_Cut_Click(object sender, RoutedEventArgs e)
-        {
-            MenuCut();
-        }
-
-        private void MenuItem_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            MenuCopy();
-        }
-
-        private void MenuItem_Paste_Click(object sender, RoutedEventArgs e)
-        {
-            MenuPaste();
-        }
-
-        private void MenuItem_Delete_Click(object sender, RoutedEventArgs e)
-        {
-            MenuDelete();
-        }
-
         private void MenuItem_Find_Click(object sender, RoutedEventArgs e)
         {
             MenuFind();
@@ -104,11 +79,6 @@ namespace Clonepad.UI
         {
             _fileSaved = false;
             SetTitle();
-        }
-
-        private void TextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            UpdateUndoList();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
