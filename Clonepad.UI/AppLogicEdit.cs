@@ -4,9 +4,12 @@ namespace Clonepad.UI
 {
     public partial class MainWindow : Window
     {
+        //TODO: The "Delete" function in the menu dosen't work - Change that!
+
         public void MenuFind()
         {
-            //TODO: MenuFind()
+            var findDialog = new FindDialog(this);
+            findDialog.Show();
         }
 
         public void MenuFindNext()

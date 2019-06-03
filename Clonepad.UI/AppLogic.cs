@@ -74,6 +74,22 @@ namespace Clonepad.UI
             }
         }
 
+        public void Find(string textToFind)
+        {
+            var selectionLenght = TextBox.SelectedText.Length;
+            var index = TextBox.Text.IndexOf(textToFind, TextBox.CaretIndex + selectionLenght);
+
+            if (index != -1)
+            {
+                TextBox.Select(index, textToFind.Length);
+                Focus();
+            }
+            else
+            {
+                //TODO: Show a "cannot find" box
+            }
+        }
+
         public MessageBoxResult DoYouWantToSaveDialog()
         {
             var messageBoxText = $"Do you want to save changes to {_fileSaveName}";
