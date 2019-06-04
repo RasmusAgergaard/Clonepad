@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clonepad.UI", "Clonepad.UI\Clonepad.UI.csproj", "{37A43094-38BA-4401-82AC-546BAA2D9CF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clonepad", "Clonepad.UI\Clonepad.csproj", "{37A43094-38BA-4401-82AC-546BAA2D9CF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

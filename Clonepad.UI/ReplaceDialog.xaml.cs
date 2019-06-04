@@ -14,24 +14,37 @@ using System.Windows.Shapes;
 
 namespace Clonepad.UI
 {
-    public partial class FindDialog : Window
+    /// <summary>
+    /// Interaction logic for ReplaceDialog.xaml
+    /// </summary>
+    public partial class ReplaceDialog : Window
     {
         private MainWindow _window;
 
-        public FindDialog(MainWindow mainWindow)
+        public ReplaceDialog(MainWindow mainWindow)
         {
             InitializeComponent();
             _window = mainWindow;
         }
 
-        private void Button_Click_Find(object sender, RoutedEventArgs e)
+        private void Button_Click_FindNext(object sender, RoutedEventArgs e)
         {
-            FindDialogFindNext();
+            ReplaceDialogFindNext();
+        }
+
+        private void Button_Click_Replace(object sender, RoutedEventArgs e)
+        {
+            ReplaceDialogReplace();
+        }
+
+        private void Button_Click_ReplaceAll(object sender, RoutedEventArgs e)
+        {
+            ReplaceDialogReplaceAll();
         }
 
         private void Button_Click_Cancel(object sender, RoutedEventArgs e)
         {
-            FindDialogCancel();
+            ReplaceDialogCancel();
         }
     }
 }

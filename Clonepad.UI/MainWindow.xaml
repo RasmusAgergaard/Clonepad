@@ -27,24 +27,18 @@
                 <MenuItem Header="De_lete" Command="ApplicationCommands.Delete" />
                 <Separator />
                 <MenuItem Header="_Find" Click="MenuItem_Find_Click" />
-                <MenuItem Header="Find _Next" Click="MenuItem_FindNext_Click" />
                 <MenuItem Header="_Replace..." Click="MenuItem_Replace_Click" />
-                <MenuItem Header="_Go To..." Click="MenuItem_GoTo_Click" />
                 <Separator />
                 <MenuItem Header="Select _All" Click="MenuItem_SelectAll_Click" />
-                <MenuItem Header="Time/_Date" Click="MenuItem_TimeDate_Click" />
+                <MenuItem Header="_Date/Time" Click="MenuItem_DateTime_Click" />
             </MenuItem>
             <MenuItem Header="F_ormat">
-                <MenuItem Header="_Word Wrap" />
-                <MenuItem Header="_Font..." />
-            </MenuItem>
-            <MenuItem Header="_View">
-                <MenuItem Header="_Status Bar" />
+                <MenuItem Header="_Word Wrap" IsCheckable="True" Checked="MenuItem_WordWrap_Checked" Unchecked="MenuItem_WordWrap_UnChecked" />
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="View _Help" />
+                <MenuItem Header="View _Documentation" Click="MenuItem_ViewDocumentation_Click" />
                 <Separator />
-                <MenuItem Header="_About Clonepad" />
+                <MenuItem Header="_About Clonepad" Click="MenuItem_About_Click" />
             </MenuItem>
         </Menu>
 

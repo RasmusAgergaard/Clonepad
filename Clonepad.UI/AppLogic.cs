@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 
@@ -74,19 +75,66 @@ namespace Clonepad.UI
             }
         }
 
-        public void Find(string textToFind)
+        public void Find(string textToFind, directions direction)
         {
             var selectionLenght = TextBox.SelectedText.Length;
-            var index = TextBox.Text.IndexOf(textToFind, TextBox.CaretIndex + selectionLenght);
+            int indexOfText;
 
-            if (index != -1)
+            if (direction == directions.Up)
             {
-                TextBox.Select(index, textToFind.Length);
+                if (TextBox.CaretIndex > 0)
+                {
+                    indexOfText = TextBox.Text.LastIndexOf(textToFind, TextBox.CaretIndex - 1);
+                }
+                else
+                {
+                    indexOfText = -1;
+                }
+            }
+            else
+            {
+                indexOfText = TextBox.Text.IndexOf(textToFind, TextBox.CaretIndex + selectionLenght);
+            }
+
+            if (indexOfText != -1)
+            {
+                TextBox.Select(indexOfText, textToFind.Length);
                 Focus();
             }
             else
             {
-                //TODO: Show a "cannot find" box
+                MessageBox.Show($"Cannot find '{textToFind}'", "Clonepad", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public void Replace(string replaceText)
+        {
+            TextBox.SelectedText = replaceText;
+        }
+
+        public void ReplaceAll(string textToReplace, string replacement)
+        {
+            var tempText = TextBox.Text.Replace(textToReplace, replacement);
+            TextBox.Text = tempText;
+        }
+
+        public void InsertDateTime()
+        {
+            var dateTime = DateTime.Now;
+
+            var tempText = TextBox.Text.Insert(TextBox.CaretIndex, dateTime.ToString());
+            TextBox.Text = tempText;
+        }
+
+        public void SetWordWrap(bool wordWrapOn)
+        {
+            if (wordWrapOn)
+            {
+                TextBox.TextWrapping = TextWrapping.Wrap;
+            }
+            else
+            {
+                TextBox.TextWrapping = TextWrapping.NoWrap;
             }
         }
 

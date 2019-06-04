@@ -14,24 +14,19 @@ using System.Windows.Shapes;
 
 namespace Clonepad.UI
 {
-    public partial class FindDialog : Window
+    /// <summary>
+    /// Interaction logic for AboutDialog.xaml
+    /// </summary>
+    public partial class AboutDialog : Window
     {
-        private MainWindow _window;
-
-        public FindDialog(MainWindow mainWindow)
+        public AboutDialog()
         {
             InitializeComponent();
-            _window = mainWindow;
         }
 
-        private void Button_Click_Find(object sender, RoutedEventArgs e)
+        private void Button_Click_Ok(object sender, RoutedEventArgs e)
         {
-            FindDialogFindNext();
-        }
-
-        private void Button_Click_Cancel(object sender, RoutedEventArgs e)
-        {
-            FindDialogCancel();
+            Close();
         }
     }
 }

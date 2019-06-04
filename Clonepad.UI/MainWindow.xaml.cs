@@ -44,19 +44,9 @@ namespace Clonepad.UI
             MenuFind();
         }
 
-        private void MenuItem_FindNext_Click(object sender, RoutedEventArgs e)
-        {
-            MenuFindNext();
-        }
-
         private void MenuItem_Replace_Click(object sender, RoutedEventArgs e)
         {
-            MenuFindNext();
-        }
-
-        private void MenuItem_GoTo_Click(object sender, RoutedEventArgs e)
-        {
-            MenuGoTo();
+            MenuReplace();
         }
 
         private void MenuItem_SelectAll_Click(object sender, RoutedEventArgs e)
@@ -64,16 +54,32 @@ namespace Clonepad.UI
             MenuSelectAll();
         }
 
-        private void MenuItem_TimeDate_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_DateTime_Click(object sender, RoutedEventArgs e)
         {
-            MenuTimeDate();
+            MenuDateTime();
         }
 
         //Format
+        private void MenuItem_WordWrap_Checked(object sender, RoutedEventArgs e)
+        {
+            MenuWordWrap(true);
+        }
 
-        //View
+        private void MenuItem_WordWrap_UnChecked(object sender, RoutedEventArgs e)
+        {
+            MenuWordWrap(false);
+        }
 
         //Help
+        private void MenuItem_About_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAbout();
+        }
+
+        private void MenuItem_ViewDocumentation_Click(object sender, RoutedEventArgs e)
+        {
+            MenuViewDocumentation();
+        }
 
         //Other events
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -86,5 +92,7 @@ namespace Clonepad.UI
         {
             ExitSaveCheck(e);
         }
+
+
     }
 }

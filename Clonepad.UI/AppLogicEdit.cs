@@ -12,29 +12,20 @@ namespace Clonepad.UI
             findDialog.Show();
         }
 
-        public void MenuFindNext()
-        {
-            //TODO: MenuFindNext()
-        }
-
         public void MenuReplace()
         {
-            //TODO: MenuReplace()
-        }
-
-        public void MenuGoTo()
-        {
-            //TODO: MenuGoTo()
+            var replaceDialog = new ReplaceDialog(this);
+            replaceDialog.Show();
         }
 
         public void MenuSelectAll()
         {
-            //TODO: MenuSelectAll()
+            TextBox.SelectAll();
         }
 
-        public void MenuTimeDate()
+        public void MenuDateTime()
         {
-            //TODO: MenuTimeDate()
+            InsertDateTime();
         }
     }
 }
