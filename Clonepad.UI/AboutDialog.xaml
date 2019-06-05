@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="AboutDialog" Height="400" Width="400">
     <Grid>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="287,319,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Ok"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="154,319,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Ok"/>
+        <Image HorizontalAlignment="Left" Height="auto" Margin="40,29,0,0" VerticalAlignment="Top" Width="300" Source="Images/clonepad_logo.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="139" Width="300"><Run Text="Clonepad by Rasmus Agergaard @ 2019"/><LineBreak/><Run/><LineBreak/><Run Text="Created with the purpose of replacing a program I use daily, Notepad, with one I have created myself."/><LineBreak/><Run/><LineBreak/><Run Text="Created with Windows Presentation Foundation (WPF) and C#"/><Run Text="."/></TextBlock>
 
     </Grid>
 </Window>

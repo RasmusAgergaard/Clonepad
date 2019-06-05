@@ -50,6 +50,23 @@ namespace Clonepad.UI
             }
         }
 
+        public void OpenFileOnLoad()
+        {
+            var commandLineArgs = Environment.GetCommandLineArgs();
+
+            if (commandLineArgs.Length > 1)
+            {
+                var filePath = commandLineArgs[1];
+
+                TextBox.Text = File.ReadAllText(filePath);
+                _fileSaved = true;
+                _fileSaveName = Path.GetFileName(filePath);
+                _fileSavePath = filePath;
+
+                SetTitle();
+            }
+        }
+
         public void SaveFile()
         {
             File.WriteAllText(_fileSavePath, TextBox.Text);

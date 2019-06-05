@@ -9,6 +9,7 @@ namespace Clonepad.UI
         {
             InitializeComponent();
             SetTitle();
+            OpenFileOnLoad();
             TextBox.IsInactiveSelectionHighlightEnabled = true;
         }
 
