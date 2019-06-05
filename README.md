@@ -16,5 +16,9 @@ Created with the purpose of replacing a program I use daily, Notepad, with one I
 ## About Clonepad
 Created with Windows Presentation Foundation(WPF) and C#.
 
+#### Screenshot 
+![alt text](https://github.com/RasmusAgergaard/Clonepad/blob/master/Images/screenshots.png?raw=true "Screenshot")
+
 ## Know bugs and missing features
 - The delete function in the top menu dosen't work - However pressing "Del" on the keyboard does...
+- Missing keyboard shortcuts for some menu items
