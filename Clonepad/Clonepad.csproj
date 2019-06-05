@@ -89,11 +89,11 @@
     <Compile Include="AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppLogicFormat.cs" />
-    <Compile Include="AppLogicHelp.cs" />
-    <Compile Include="DialogLogicFind.cs" />
-    <Compile Include="DialogLogicReplace.cs" />
-    <Compile Include="Enums.cs" />
+    <Compile Include="Logic\AppLogicFormat.cs" />
+    <Compile Include="Logic\AppLogicHelp.cs" />
+    <Compile Include="Logic\DialogLogicFind.cs" />
+    <Compile Include="Logic\DialogLogicReplace.cs" />
+    <Compile Include="Logic\Enums.cs" />
     <Compile Include="FindDialog.xaml.cs">
       <DependentUpon>FindDialog.xaml</DependentUpon>
     </Compile>
@@ -112,8 +112,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppLogic.cs" />
-    <Compile Include="AppLogicEdit.cs" />
+    <Compile Include="Logic\AppLogic.cs" />
+    <Compile Include="Logic\AppLogicEdit.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -128,7 +128,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppLogicFile.cs" />
+    <Compile Include="Logic\AppLogicFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -146,7 +146,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Clonepad_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,5 +172,6 @@
   <ItemGroup>
     <Resource Include="Images\clonepad_logo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

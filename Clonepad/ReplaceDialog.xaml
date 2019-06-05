@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clonepad.UI"
         mc:Ignorable="d"
-        Title="Replace" Height="153" Width="356" ResizeMode="NoResize">
+        Title="Replace" Height="160" Width="356" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="TextBoxFind" HorizontalAlignment="Left" Height="23" Margin="92,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
         <Label Content="Find what:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Height="27"/>

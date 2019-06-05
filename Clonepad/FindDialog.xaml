@@ -12,7 +12,7 @@
         <Button Content="Find Next" HorizontalAlignment="Left" Margin="246,14,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Find"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="246,39,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Cancel"/>
         
-        <GroupBox Header="Direction" HorizontalAlignment="Left" Height="52" Margin="10,42,0,0" VerticalAlignment="Top" Width="146">
+        <GroupBox Header="Direction" HorizontalAlignment="Left" Height="52" Margin="10,48,0,0" VerticalAlignment="Top" Width="146">
             <StackPanel Margin="0,0,0,0" Orientation="Horizontal">
                 <RadioButton x:Name="RadioButtonUp" Content="Up" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
                 <RadioButton x:Name="RadioButtonDown" Content="Down" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
