@@ -10,5 +10,11 @@ Created with the purpose of replacing a program I use daily, Notepad, with one I
 - Insert date/time
 - Toggleable word wrap
 
+## Download
+[Download Clonepad here](https://github.com/RasmusAgergaard/Clonepad/blob/master/Download/Clonepad.zip?raw=true) - Extract the .zip file, and run Clonepad.exe
+
 ## About Clonepad
 Created with Windows Presentation Foundation(WPF) and C#.
+
+## Know bugs and missing features
+- The delete function in the top menu dosen't work - However pressing "Del" on the keyboard does...
